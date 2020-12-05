@@ -186,7 +186,8 @@
  The histogram on the right shows the number of actors that starred in a movie in each decade and it naturally also increases from decade to decade. 
  However, it is interesting that the two histograms are not exactly alike. We observe that in the actors histogram the high of the bars in the early decades
  are lower relative to the the corresponding bars in the movies histogram such that the increase in number of actors happens in a slower pace. This indicates
- that the cast sizes in the earlier decades were smaller, just like the variety in used actors might be bigger in the later decades. 
+ that the cast sizes in the earlier decades were smaller, just like the variety in used actors might be bigger in the later decades. The network in each decade is
+ investigated further under <a href="/timeline">Timeline</a>.
 </div>	
 	<p> <br> </p>
 <a id="number_of_genres">
@@ -199,7 +200,11 @@
 </center>
   <p> </p>
 <div class="textbox">	
-  The histograms below show the number of movies that fall within each genre together with the number of actors that have starred in a movie within each genre. 
+  The histograms below show the number of movies that fall within each genre together with the number of actors that have starred in a movie within each genre.
+  The first histogram shows that <i>Drama</i> is by far the most represented genre among the movies on the IMDB list. Interestingly, the two histograms show that 
+  even though <i>Comedy</i> is the third most represented genre, the have actually starred more actors within the genres <i>Crime</i> and <i>Action</i>. This
+  can be explained by the fact that these type of movies often have a bigger cast than movies that are categorized as comedies. 
+	
 </div>
 <div class="centered-container">
   <iframe src="Plots/GenreHistogram.html" height="516" width="1200"></iframe>
@@ -218,8 +223,8 @@
 	<p> </p>	
 <center>
 <div class="textbox">
-Now, the basic statistics of the network of actors is found. 	
-  <img src="Plots/large_graph.png" alt="bar" width="600" height="300" style="float:center">
+Finally it is time to look at the network of actors. First, the basic statistics of the graph is shown. 	
+  <img src="Plots/large_graph.png" alt="bar" width="600" height="300" style="float:left">
   <br>
 As expected, the whole graph consists of 28.862 nodes, which is consistent with the number of rows in the dataframe of actors. The graph has 1.057.799 edges, 
 which represents the connections between the actors (nodes) in the network. Here, a connection (edge) between two actors (nodes) is based on the list of the 
