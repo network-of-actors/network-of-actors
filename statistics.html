@@ -204,7 +204,7 @@
 <div class="textbox">	
   The histograms below show the number of movies that fall within each genre together with the number of actors that have starred in a movie within each genre.
   The first histogram shows that <i>Drama</i> is by far the most represented genre among the movies on the IMDB list. Interestingly, the two histograms show that 
-  even though <i>Comedy</i> is the third most represented genre, the have actually starred more actors within the genres <i>Crime</i> and <i>Action</i>. This
+  even though <i>Comedy</i> is the third most represented genre, there have actually starred more actors within the genres <i>Crime</i> and <i>Action</i>. This
   can be explained by the fact that these type of movies often have a bigger cast than movies that are categorized as comedies. 
 	
 </div>
@@ -229,6 +229,7 @@
 Finally it is time to look at the network of actors. First, the basic statistics of the graph is shown. 	
   <img src="Plots/large_graph.png" alt="bar" width="600" height="300" style="float:left">
 </div> 
+	<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>	
 <div class="textbox">	
 As expected, the whole graph consists of 28.862 nodes, which is consistent with the number of rows in the dataframe of actors. The graph has 1.057.799 edges, 
 which represents the connections between the actors (nodes) in the network. Here, a connection (edge) between two actors (nodes) is based on the list of the 
@@ -251,11 +252,31 @@ Finally, we find that the average shortest path in the giant connected component
 reach each other. 	
 </div>
 </center>
-	
+
+<center>
+<div class="textbox">
+ The degree distribution of the network is visualized below both as a normal plot and on double logarithmic axis (log-log plot). 
+ On the left side of the log-log plot the points falls on a straight line, which would indicate that the degree distribution follows a power-law, 
+ which is consistent with the plot with normal axis, which has a very long tail, where a few actors have very high degrees. This would indicate that the network
+ of actors is scale-free. However, the degree distribution does not strictly follow a power-law. The points with the lowest degrees actually appear to follow a 
+ poisson distribution, which would indicate that the network was random. Hence, we observe tendencies from both kind of networks, even though the majority of points
+ follows a power-law distribution. It is natural that the network cannot be completely random, since it is based on the casts of 1000 movies. Additionally, the 
+ network is not completely scale-free since all actors will at least have a degree corresponding to the size of the cast in the movie they have starred in. 
+</div> 	
+</center>	
 <div class="centered-container">
   <iframe src="Plots/degreedist_large_graph.html" height="466" width="1200"></iframe>
 </div>
 	<p></p>
+<center>
+<div class="textbox">
+ Finally, the network is visualized below. The left side of the plot shows the entire network with all it's components, while the right side of the plot
+ zooms in on the giant connected component. The node sizes have been adjusted relative to the degree of the nodes. Additionally, the edges between nodes 
+ have been seperated into two groups; edges with a weight of 1, which indiactes that the actors have starred in one movie together, and edges with a weight 
+ of more than 1, which means that the two actors have starred in several movies together. Edges with a weight of 1 is represented by a dashed, light brown 
+ line, while edges with a higher weight is represented by a solid, dark brown line.
+</div> 	
+</center>	
 <center>
 <div class="imagebox">
   <img src="Plots/network_large_graph.png" alt="bar" width="1200" height="500" style="float:center">
