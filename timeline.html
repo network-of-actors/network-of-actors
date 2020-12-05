@@ -95,7 +95,15 @@
 <center> 
 <div class="textbox">
   <h2 style="color:#b30000;"> Network of actors from decade to decade </h2>
-   Hej hej
+   The 1000 top rated movies on IMDB have release year spanning from the 1920s to 2020. Hence, it is quite interesting to dig further into the
+   network of actors in the respective decades to see if the actors become more and more connected. To do so the degree distribution
+   together with a visualization of the full network and the giant connected component is visualized for each decade. For the giant connected component
+   the three nodes with the highest degrees have been labeled with the name of the respective actors and their nodes have been positioned in seperate
+   corners of the graph. In addition, the edges between nodes have been seperated into two groups; edges with a weight of 1, meaning that the actors have
+   starred in one movie together, and edges with a weight of more than 1, meaning that the two actors have starred in more than one movie together. 
+   Edges with a weight of 1 is represented by a dashed, light brown line, while edges with a higher weight is represented by a solid, dark brown line. 
+   Furthermore, some basic statistics of the network in each decade is shown below the visualization of the network. 
+   Note, that movies that were released in 2020 have been included in the 2010s. 
 </div>
 
 </center>
@@ -124,15 +132,17 @@
 </div>
 <div class="textbox">	
 	Based on the top 1000 rated movies, the network of actors in the 1920s consists of 8 connected components. 
-	As it was shown in the <a href="/statistics#decaded" style=color:#b30000>statistics</a> of all 1000 movies, only nine
+	As it was shown in the <a href="/statistics#decades" style=color:#b30000>statistics</a> of all 1000 movies, only nine
 	was made in the 1920s. Thus, the eight connected components reflects that seven of these just corresponds to one movie, while the last one
 	is the network of two movies. The plot of the giant connected components shows that Joe Keaton and Buster Keaton starred in both of these movies 
-	and hence, the edge between these two actor is solid, which represent that they are connected by more than one movie. The fact that Wolfgang Heinz
+	and hence, the edge between these two actors is solid, which represent that they are connected by more than one movie. The fact that Wolfgang Heinz
 	is shown as the actor with the third highest degree is just a coincidence and it might as well have been one of the other actors in the particular
-	movie that he starred in. The seven components that each represent the cast of a movie are so called cliques, or complete graphs, were all nodes are 
-	connected, which can also be seen at the plot to the left, where there are edges between all nodes within the cliques. <br>
+	movie that he starred in. The seven components that each represent the cast of a movie are so called cliques, or complete graphs, where all nodes are 
+	connected, which can also be seen at the plot of the full network to the left, where there are edges between all nodes within the cliques. <br>
 	It is found that the minimum node degree is three, meaning that there is a movie with a cast of only four, while the maximum degree of a node is 13. 
 	Since this degree belongs to Buster Keaton and Joe Keaton it reflects that they in total are connected to 13 other actors by starring in two movies. 
+	Since the network in this decade is very disconnected, the plot of the degree distribution can almost be viewed as the number of actors in each movies. 
+	However, note that it is not exatly the case, but it is a good indication of the cast sizes, since only two movies are connected in this decade.
 </div>	
 </center>	
 	<p> <br> </p>
@@ -159,11 +169,14 @@
   <img src="Plots/stat_1930s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
 <div class="textbox">	
-	It was shown in the <a href="/statistics#decaded" style=color:#b30000>statistics</a> that 17 movies on the IMDB list was produced in 1930, but now
+	It was shown in the <a href="/statistics#decaded" style=color:#b30000>statistics</a> that 17 movies on the IMDB list was produced in the 1930s, but now
 	the network consists of 12 components, so the network of actors have become more connected in this decade compared to the 1920s. Furthermore, the giant
 	connected component now includes 32.9% of all the nodes in the network. However, the maximum edge weight is still 2, which means that two actors have not
-	starred together in more than two movies in this decade, an the average edge weight is 1.01, so in general actors have only starred in one of the top
-	rated movies together. 
+	starred together in more than two movies in this decade, and the average edge weight is 1.01, so in general actors have only starred in one of the top
+	rated movies together in this decade. The degree distribution shows that two actors have degrees of 36, resppectively 34, which is significantly higher
+	that the rest of the actors. These two actors are Porter Hall and Claudia Rains, which are labelled in the visualization of the giant connected component. 
+	Since these degrees are that much higher that the rest we start to see hub-like tendencies in the full network, which can also be seen on the plot of the
+	full network, where the two biggest nodes looks like hubs. 
 </div>		
 </center>	
 	<p> <br> </p>	
@@ -189,6 +202,16 @@
 <div class="barbox">
   <img src="Plots/stat_1940s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	In the 1940s we find that there only are four components, and the giant component is significantly bigger that in earlier decades, where 85.8% of
+	all nodes are represented in the giant component. The highest degree of a nodes is also increased significantly to 122, which belong to the actor 
+	Ward Bond. The visualization of the giant connected components shows that he is connected to the actors with the second and third highests degrees
+	with edges of weight more than one, so he has participated in several movies with the two actors. In addition, the highest weight of an egde is now 3, 
+	so at least two actors have starred in three movies together. Even though the majority of the actors are in the giant connected component, there appears
+	to be quite a large network in the second largest component, which on the plot appears to be a clique, so we investigate what this component is. We find
+	that this indeed is a clique, which consists of the cast of the movie <i>Bicycle Thieves</i>. Interestingly, this is an Italian movie, and thus this can 
+	explain why they are not connected to the other nodes, which might be movies from the USA or other countries. 
+</div>	
 </center>
 	<p> <br> </p>	
 
@@ -213,6 +236,9 @@
 <div class="barbox">
   <img src="Plots/stat_1950s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	In the 1950s we see that the three nodes with the highest degrees al have Japanese-sounding names
+</div>	
 </center>
 	<p> <br> </p>	
 	
