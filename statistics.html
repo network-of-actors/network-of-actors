@@ -138,6 +138,7 @@
 <div class="newimagebox">	
   <img src="Plots/budget.png" alt="bar" width="570" height="100" style="float:center">
 </div>
+<a id="sentiment_score">	
 <div class = "textbox" > 
   To dig deeper into the sentiment scores of the movies the three happiest and three saddest movies, based on these average sentiment scores, are shown below. 	
 </div>	
@@ -162,9 +163,44 @@
 	
 </center>	
 
+	<p><br></p>
+<a id="decades">	
+<div class="centered-container">
+  <iframe src="Plots/DecadeHistogram.html" height="466" width="1200"></iframe>
+</div>
+	<p> </p>
+	
+<a id="number_of_genres">
+<div class="centered-container">
+  <iframe src="Plots/GenreHistogram.html" height="516" width="1200"></iframe>
+</div>
+<div class="centered-container">
+  <iframe src="Plots/GenreActorHistogram.html" height="516" width="1200"></iframe>
+</div>
+	
 <center>
 <div class="textbox">
   <img src="Plots/large_graph.png" alt="bar" width="600" height="300" style="float:center">
+  <br>
+As expected, the whole graph consists of 28.862 nodes, which is consistent with the number of rows in the dataframe of actors. The graph has 1.057.799 edges, 
+which represents the connections between the actors (nodes) in the network. Here, a connection (edge) between two actors (nodes) is based on the list of the 
+1000 highest rated movies on IMDB, such that if two actors have participated in the same of these movies, they will be considered connected and thus, an edge 
+will be drawn between them. Since it is possible that two actors have starred in more than one of these movies together, the dges have been given weights, such 
+that an edge weight of e.g. 4 indicates that the two actors that are linked between this edge have starred together in four of the 1000 highest ratest IMDB movies.
+
+It is observed that the lowest edge weight is 1 and the highest edge weight is 11. This means that two actors have actually starred together in 11 of the 1000 
+highest rated movies on IMDB. However, it is also shown that the average edge weight is only 1.01 so in general, actors only star together in one of these movies.
+
+Furthermore, the basic statistic of the degrees in the graph is found. Since an edge is drawn between two actors if they have starred in the same movie, this 
+results in an undirected graph, where we just have degrees and no in- and outdegrees. The minimum degree in the graph is 3, whereas the highest degree of an actor 
+is 1356. Since this is a weighted graph this does not necessarily indicate that the actor with this degree is connected to exactly 1356 other actors. This, since 
+the actor could be connected to annother actor with an edge with weight 4, which will contribute to the degree count with 4 rather than 1. The degree distribution 
+is investigated further below. 
+
+We observe that there exists 26 connected components. However, the giant conencted component actually has 28.086 nodes, which corresponds to 97.3% of all nodes. 
+This, despite the fact that the release year for the movies span from the 1920s to 2020. In that way it must be stated that the actors indeed are quite connected. 
+Finally, we find that the average shortest path in the giant connected component is 3.55, meaning that in less that 4 steps all the actors in this component can 
+reach each other. 	
 </div>
 </center>
 	
@@ -177,21 +213,11 @@
   <img src="Plots/network_large_graph.png" alt="bar" width="1200" height="500" style="float:center">
 </div>
 </center>
-	<p><br></p>
-<a id="number_of_genres">
-<div class="centered-container">
-  <iframe src="Plots/GenreHistogram.html" height="516" width="1200"></iframe>
+<center>
+<div class="textbox">
+  
 </div>
-<div class="centered-container">
-  <iframe src="Plots/GenreActorHistogram.html" height="516" width="1200"></iframe>
-</div>
-
-<a id="decades">	
-<div class="centered-container">
-  <iframe src="Plots/DecadeHistogram.html" height="466" width="1200"></iframe>
-</div>
-	
-<a id="sentiment_score">
+</center>
 	
 </div>  
 </body>
