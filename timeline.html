@@ -268,12 +268,15 @@
 </div>
 <div class="textbox">	
 	The 1960s is a quite interesting decade, where the three nodes with the highest degrees are Toshirô Mifune, Yoshio Tsuchiya and Yutaka Sada, but these
-	are not part of the giant connected component. Instead they must be part of the second biggest component, which also appears to be quite large. Again, 
-	we see that these names are Japanese-sounding, so the second largest component is a component of Japanese movies. An explanation of why the actors with the 
+	are not part of the giant connected component. Instead they must be part of the second biggest component, which appears to be quite large as well, which is
+	also seen in the fact that only 72.3% of all nodes are contained in the giant connected component. As for the 1950s we see that the names of the actors 
+	with highest degrees are Japanese-sounding, so the second largest component is a component of Japanese movies. An explanation of why the actors with the 
 	highest degrees are not in the giant connected component could be, that the giant connected component consists of more, smaller movies that are connected
 	by actors that star in more of these movies. On the contrary, the second largest component consists of fewer movies but with bigger casts, which results
-	in higher degrees for the actors that star in several of these movies. 
-</div>		
+	in higher degrees for the actors that star in several of these movies. The degree distribution in this decade looks a bit like a Poisson distribtion, which
+	would indicate that the network of actors in the decade is a random network. However, it is not strictly following a Poisson distribution, since 
+	there is a quite long tail to the left, where nodes have a very high degree. 
+</div>	
 </center>	
 	<p> <br> </p>	
 	
@@ -298,8 +301,15 @@
 <div class="barbox">
   <img src="Plots/stat_1970s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	In the 1970s the network of actors consists of 2043 nodes, with one giant connected 
+	component and ten smaller components. The degree distribution shows that the actor with the highest degree, Diane Keaton, has a degree of 250, which
+	is signifantly higher than the rest of the actors. The plot of the giant connected components shows, that the actors with the highest degrees are connected
+	by edges with a weight higher than one, so these actors have starred in several movies together. Furthermore it is find that 85.2% of all nodes are
+	included in the giant connected component and that the average shortest path between two nodes in this network is 2.97.
+</div>		
 </center>	
-	<p> </p>	
+	<p> <br> </p>	
 
 <center>	
 <div class = "box" > 
@@ -322,6 +332,13 @@
 <div class="barbox">
   <img src="Plots/stat_1980s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	In the 1980s the network of actors becomes even more connected with a giant connected component that consists of 93.1% of all the nodes. The actors
+	with the highest degrees in this decade is Robert De Niro, Carrie Fisher and Harrison Ford, who have degrees of 332, 314 and 298, respectively. The 
+	degree distribution furthermore shows that there are multiple actors with degrees above 150, while the majority har significantly lower degrees. 
+	However, we observe some interesting spikes in the degree distribution with many actors having degrees of 62, 90, 104 and 146, respectively. These spikes
+	might indicate the cast sizes of particular movies, since so many actors fall within these degrees. 
+</div>	
 </center>	
 	<p> <br> </p>	
 	
@@ -346,6 +363,13 @@
 <div class="barbox">
   <img src="Plots/stat_1990s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	In the 1990s we again find Robert De Niro to be one of the three nodes with the highest degree. This indicate that he indeed was very active in his
+	acting career in the 1980s and 1990s. Furthermore we observe an even larger giant connected component with 95.2% of all nodes. The smaller components
+	might just consist of one movie, which will explain the minimum degree of 9, which is most likely representing that the cast of a movie is 10. Even though
+	the average edge weight is still 1, we now found that the highest edge weight is 6, which means that at least two actors have starred together in 6 of the
+	1000 top rated IMDB movies in the 1990s. This is quite impressive! 
+</div>	
 </center>	
 	<p> <br> </p>	
 	
@@ -370,6 +394,16 @@
 <div class="barbox">
   <img src="Plots/stat_2000s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	The 2000s is actually the decade with the biggest network, which consists of 9126 nodes and it is also the decade with the most movies on the IMDB list, 
+	where 213 of the movies were produced in this decade. However, interestingly the giant connected component actually contains a lower percentage of the
+	total number of nodes compared to the 1990s, since 91.3% of all nodes are contained in the giant component in the 2000s compared to 95.2% in the 1990s. 
+	Furthermore, the maximum edge weight in this decade is 4, compared to 6 in the 1990s, so it appears that there might be a greater variance in the actors
+	used in this decade compared to the 1990s. Another interesting observation is the fact that the actor with the highest degree, Chiwetel Ejiofor, is not
+	connected to the actor with the second highest degree, Christian Bale, which has been the case in the earlier decades. However, we do see that Christian 
+	Bale is connected to Gary Oldman, who is the actor with the third highest degree, and these are actually connected by an edge with a weight higher than 1, 
+	so they have starred together in several of the top rated movies on IMDB in the 2000s. 
+</div>	
 </center>	
 	<p> <br> </p>	
 	
@@ -394,7 +428,17 @@
 <div class="barbox">
   <img src="Plots/stat_2010s.png" alt="bar" width="850" height="70" style="float:center">
 </div>
+<div class="textbox">	
+	Finally, we look at the network of actors from the 2010s. We observe that the actor with the highest degree, Stan Lee, has a degree of 633, so 
+	in the 2010s he has starred together with many actors - he has not starred together with exactly 633, since he have starred together with some of
+	the actors in more than one movie. As an example, on the visualization of the giant connected component we observe that he is connected to Scarlett 
+	Johansson by an edge with weight more than 1, so these two actors have starred in at least two of the top rated movies in the 2010s. Furthermore we 
+	observe that the 2010s actually consists of 18 components, which suggests that the variety of used actors in this decade is bigger compared to some of
+	the earlier decades. It could further indicate that countries with smaller movie indutries compared to Hollywood, produce movies that make it to the
+	top 1000 rated movies on IMDB and thereby results in multiple, smaller components in the entire network. 
+</div>	
 </center>	
+	
 	<p> <br> </p>	
 
 	
