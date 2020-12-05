@@ -174,15 +174,21 @@
 	<h2 style="color:#443028;"> Text analysis </h2>
 </div>
 </center>
-Finally, we want to get an impression of the elements and topics which characterises each genre. We base this on a text analysis performed on the plot synopses and the list 
-	of keywords for the movies within the genres. The results are shown in the word clouds below. Some different methods have been used in order to obtain word clouds which
+
+<center> 
+<div class="textbox">
+   Finally, we want to get an impression of the elements and topics which characterises movie plots of each genre. We base this on a text analysis performed on the plot synopses and the list 
+	of keywords for the movies within the genres, with the result of the analysis displayed as word clouds. Some different methods have been used in order to obtain word clouds which
 	best describe the unique aspects of the genres. First of all, stop words such as "a", "the", etc. are not included in the analysis, since statistics about the use of these
 	words will not contribute to the unique description of the genre. Furthermore, the words have been weighted using the 
 	<a href="https://en.wikipedia.org/wiki/Tf–idf" target="_blank" style=color:#b30000>TF-IDF approach</a>. With this weighting method, each word is given a different weight
 	with respect to each genre. A word used in the material of a genre will be given a high weight if it is not seen in the material for many of the other genres, and a 
-	low weight if it is also seen in the material for most or all of the other genres. <br><br>
+	low weight if it is also seen in the material for most or all of the other genres. The results are shown in the word clouds below. <br><br>
 	
-	
+	The obtained word clouds seem to describe the genres well. We see that words such as "police", "gun", "death" and "shot" are used frequently to describe the plot
+	of movies within the genres thriller, action, crime and mystery. 
+</div>
+</center>
 <center>
 <div class="imagebox">
   <img src="Plots/GenreWordClouds.png" height="900" width="1200" style = "float:center">
