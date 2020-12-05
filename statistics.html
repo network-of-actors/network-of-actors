@@ -164,22 +164,61 @@
 </center>	
 
 	<p><br></p>
-<a id="decades">	
+<center>
+<div class = "box" > 
+  <center>
+	<h2 style="color:#443028;"> Decades </h2>
+  </center> 
+</div>
+</center>
+	<p> </p>
+<a id="decades">
+<div class="textbox">	
+  The histograms below show how many of the movies on the IMDB list that were produced in each decade together with the total number of actors that starred in 
+  one of these movies in each decade. Note, that movies produced in 2020 are included in the 2010s. 
+</div>
 <div class="centered-container">
   <iframe src="Plots/DecadeHistogram.html" height="466" width="1200"></iframe>
 </div>
-	<p> </p>
-	
+<div class="textbox">	
+ The histogram to the left shows that in general the number of movies on the IMDB list increases from decade to decade. However, we observe that it is
+ actually the 2000s that has the highest number of produced movies. This could indicate that the 2000s indeed was a decade where very good movies were produced. 
+ The histogram on the right shows the number of actors that starred in a movie in each decade and it naturally also increases from decade to decade. 
+ However, it is interesting that the two histograms are not exactly alike. We observe that in the actors histogram the high of the bars in the early decades
+ are lower relative to the the corresponding bars in the movies histogram such that the increase in number of actors happens in a slower pace. This indicates
+ that the cast sizes in the earlier decades were smaller, just like the variety in used actors might be bigger in the later decades. 
+</div>	
+	<p> <br> </p>
 <a id="number_of_genres">
+<center>
+<div class = "box" > 
+  <center>
+	<h2 style="color:#443028;"> Genres</h2>
+  </center> 
+</div>
+</center>
+  <p> </p>
+<div class="textbox">	
+  The histograms below show the number of movies that fall within each genre together with the number of actors that have starred in a movie within each genre. 
+</div>
 <div class="centered-container">
   <iframe src="Plots/GenreHistogram.html" height="516" width="1200"></iframe>
 </div>
 <div class="centered-container">
   <iframe src="Plots/GenreActorHistogram.html" height="516" width="1200"></iframe>
 </div>
-	
+	<p> <br> </p>
+<center>
+<div class = "box" > 
+  <center>
+	<h2 style="color:#443028;"> Graph of actors</h2>
+  </center> 
+</div>
+</center>
+	<p> </p>	
 <center>
 <div class="textbox">
+Now, the basic statistics of the network of actors is found. 	
   <img src="Plots/large_graph.png" alt="bar" width="600" height="300" style="float:center">
   <br>
 As expected, the whole graph consists of 28.862 nodes, which is consistent with the number of rows in the dataframe of actors. The graph has 1.057.799 edges, 
@@ -187,16 +226,16 @@ which represents the connections between the actors (nodes) in the network. Here
 1000 highest rated movies on IMDB, such that if two actors have participated in the same of these movies, they will be considered connected and thus, an edge 
 will be drawn between them. Since it is possible that two actors have starred in more than one of these movies together, the dges have been given weights, such 
 that an edge weight of e.g. 4 indicates that the two actors that are linked between this edge have starred together in four of the 1000 highest ratest IMDB movies.
-
+<br>
 It is observed that the lowest edge weight is 1 and the highest edge weight is 11. This means that two actors have actually starred together in 11 of the 1000 
 highest rated movies on IMDB. However, it is also shown that the average edge weight is only 1.01 so in general, actors only star together in one of these movies.
-
+<br>
 Furthermore, the basic statistic of the degrees in the graph is found. Since an edge is drawn between two actors if they have starred in the same movie, this 
 results in an undirected graph, where we just have degrees and no in- and outdegrees. The minimum degree in the graph is 3, whereas the highest degree of an actor 
 is 1356. Since this is a weighted graph this does not necessarily indicate that the actor with this degree is connected to exactly 1356 other actors. This, since 
 the actor could be connected to annother actor with an edge with weight 4, which will contribute to the degree count with 4 rather than 1. The degree distribution 
 is investigated further below. 
-
+<br>
 We observe that there exists 26 connected components. However, the giant conencted component actually has 28.086 nodes, which corresponds to 97.3% of all nodes. 
 This, despite the fact that the release year for the movies span from the 1920s to 2020. In that way it must be stated that the actors indeed are quite connected. 
 Finally, we find that the average shortest path in the giant connected component is 3.55, meaning that in less that 4 steps all the actors in this component can 
