@@ -91,12 +91,6 @@
 	<p> <br> </p>
 <center>
 <div class = "box" > 
-	<h2 style="color:#443028;"> Motivation</h2>
-</div>
-</center>
-	<p> <br> </p>
-<center>
-<div class = "box" > 
 	<h2 style="color:#443028;"> Data </h2>
 </div>
 </center>
@@ -104,7 +98,8 @@
 <div class="textbox">
 	The data set is constructed specifically for this project and consists of a movies data file, and an actors data file. The data extraction is based on 
 	the <a href="https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating" target="_blank" style=color:#b30000>list of the 1000 highest 
-	user rated movies on IMDB</a>. Based on this list we have created a data set of movies with the following attributes
+	user rated movies on IMDB</a>. Based on this list we have created a data file of movies which after data cleaning consists of 862 rows and 15 attributes, 
+	which are specified below: 
 	<ul>		
   		<li>MovieID: Unique IMDB id of movie.</li>
   		<li>Title: Original title of movie.</li>
@@ -122,9 +117,18 @@
 		<li>Keywords: List of keywords for movie.<li>	
 		<li>Document: Tokens of cleaned plot synopsis and keywords.</li>
 	</ul>  
+	From the total list of actors that have played in these movies a data file of actors is created, which consists of 28,862 rows and 37 attributes, which are specified below.
+	<ul>
+		<li>ActorID: Unique IMDB id of actor.</li>
+		<li>ActorName: Full name of actor.</li>	
+		<li>Birthday: Birthday of actor.</li>	
+		<li>BirthPlace: City, state and country, where actor was born.</li>	
+		<li>BirthCountry: Country, where actor was born.</li>	
+		<li>MovieIDs: List of unique IMDB ids of movies the actor has played in.</li>
+		<li>MovieIDs_xxx: Attribute for each decade xxx containing list of unique IMDB ids of movies the actor has played in in respective decade. Total of 10 attributes.</li> 
+		<li>MovieIDs_yyy: Attribute for each genre yyy containing list of unique IMDB ids of movies the actor has played in in respective genre. Total of 21 attributes.</li> 
 </div>
 </center>
-
 	
 	<p> <br> </p>
 	
