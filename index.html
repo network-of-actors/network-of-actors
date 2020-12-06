@@ -102,13 +102,29 @@
 </center>
 <center> 
 <div class="textbox">
-		The data set is constructed specifically for this project and consists of a movies data file, and an actors data file. The data extraction is based on the <a href="https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating" target="_blank" style=color:#b30000>list of the 1000 highest user rated movies on IMDB</a>. 
+	The data set is constructed specifically for this project and consists of a movies data file, and an actors data file. The data extraction is based on 
+	the <a href="https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating" target="_blank" style=color:#b30000>list of the 1000 highest 
+	user rated movies on IMDB</a>. Based on this list we have created a data set of movies with the following attributes
+	<ul>		
+  		<li>MovieID: Unique IMDB id of movie.</li>
+  		<li>Title: Original title of movie.</li>
+		<li>ReleaseYear: Year movie was released.</li>	
+		<li>Decade: Decade movie was released in.</li>	
+  		<li>Country: Main country movie was produced in.</li>
+		<li>Budget: Estimated budget of movie</li>	
+		<li>Income: Cumulative worldwide gross of movie</li>	
+		<li>ActorIDs: List of unique IMDB ids of actors that played in movie.</li>	
+		<li>ActorNames: List of names of actors that played in movie.</li>	
+		<li>Directors: Directors of movie.</li>	
+		<li>Creators: Creators of movie.</li>
+		<li>Genres: List of genres the movie is categorized under.</li>	
+		<li>PlotSynopsis: Plot synopsis of movie.</li>	
+		<li>Keywords: List of keywords for movie.<li>	
+		<li>Document: Tokens of cleaned plot synopsis and keywords.</li>
+	</ul>  
 </div>
 </center>
-	
-<div class="centered-container">
-  <iframe src="Data/test_plotly_fig3.html" height="516" width="1200"></iframe>
-</div>
+
 	
 	<p> <br> </p>
 	
